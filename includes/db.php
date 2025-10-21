@@ -4,7 +4,6 @@
 
   $db['db_host'] = 'localhost:3306';
   $db['db_user'] = 'root';
-  $db['db_password'] = '*Tinhte2025';
   $db['db_name'] = 'phpTest';
 
   foreach($db as $key => $value){
