@@ -27,7 +27,9 @@
                             die("ERROR");
                         while($r = $queryResult->fetch_assoc()){
                     ?>
-                      <li><a href="#!"><?php echo $r['cat_type']; ?></a></li>
+                      <li><a href="<?php 
+                        echo empty($r['href']) ? '#!' : $r['href'];
+                      ?>"><?php echo $r['cat_type']; ?></a></li>
                       <?php } ?>
                   </ul>
               </div>

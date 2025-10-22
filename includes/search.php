@@ -1,8 +1,9 @@
 <?php declare(strict_types=1); include("db.php") ?>
     
 <?php 
+    $searchingValue = null;
     if (!isset($_POST['submit']))
-        echo "ERROR";
-
-    $searchingValue = $_POST['search'];
+        return;
+    else 
+        $searchingValue = $_POST['search'];
 ?>

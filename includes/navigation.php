@@ -14,8 +14,9 @@
                 $querry_select_all_categories = mysqli_query($connection, $query);
 
                 while($row = mysqli_fetch_assoc($querry_select_all_categories)){
+                    $href = empty($row['href']) ? "#" : $row['href'];
                     $category = $row['cat_type'];
-                    echo "<li class=\"nav-item\"><a class=\"nav-link\" aria-current=\"page\" href=\"#\">$category</a></li>";
+                    echo "<li class=\"nav-item\"><a class=\"nav-link\" aria-current=\"page\" href=\"$href\">$category</a></li>";
                 }
               ?>
           </ul>
